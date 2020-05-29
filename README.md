@@ -41,7 +41,7 @@ Open the **Add Python Interpreter** dialog:
 * Select from the dropdown list **Project interpreter** the recently added **Remote Python Docker interpreter**
 * Click the **icon folder** at **Path mappings** and add a new path map
 * Click de **icon folder** on **Local Path* column and select the **src folder** of the project
-* At the **Remote Path** field add **/src** and click **OK**
+* At the **Remote Path** field add **/** and click **OK**
 * Click **APPLY** in the **Settings** dialog and **OK** to close it
 
   
