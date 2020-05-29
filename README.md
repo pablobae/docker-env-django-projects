@@ -47,7 +47,7 @@ Open the **Add Python Interpreter** dialog:
   
 #### 3.2 Adjust the project path 
 
-Our project files will be inside the **src/PROJECT_NAME** and we need adjust that folder to be recognized by PyCharm as source root:
+Our project files will be inside the **src** and we need adjust that folder to be recognized by PyCharm as source root:
 
 * Select that folder and display the context menu with the secondary button of the mouse
 * Go to **Mark directory as** and select **Sources root**
