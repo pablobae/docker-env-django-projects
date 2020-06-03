@@ -4,9 +4,14 @@ Dockerized devel environment for python projects using django framework. Travis 
 ## 1. Steps
 * Edit the file **requirements.txt** with the python libraries required by your project. 
 * Run the command: **docker-compose build**
-* Create the django project structure with the command: **docker-compose run app sh -c "django-admin.py startproject PROJECT_NAME ."**
+* Create the django project structure with the command: **docker-compose run app sh -c "django-admin.py startproject PROJECT_NAME ."** (*)
+* Create the django core app(**): **docker-compose run app sh -c "python manage.py startapp core"**
+* Remove **tests.py** file at core folder, and create  **tests/__init__.py** file. This folder will contain all the tests.
+* 
+
 
 **Note:** change PROJECT_NAME with the name of your project
+**Note \*\*:** Remember add the new app to INSTALLED_APPS list in the settings.py file of the project 
 
 At this point, the folder **src** will contain the files of the django project crated.
 
@@ -55,3 +60,8 @@ Our project files will be inside the **src** and we need adjust that folder to b
 Now PyCharm will recognize the packages and modules of the project correctly
 
 
+
+## Useful commands
+
+Run tests:
+   * docker-compose run app sh -c "python manage.py test" 
