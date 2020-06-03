@@ -1,5 +1,5 @@
 # docker-env-django-projects
-Dockerized devel environment for python projects using django framework. Travis ready!
+Dockerized devel environment for python projects using **django** framework and **postgresql**. **Travis** ready!
 
 ## 1. Steps
 * Edit the file **requirements.txt** with the python libraries required by your project. 
