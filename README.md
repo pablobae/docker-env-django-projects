@@ -13,7 +13,7 @@ Dockerized devel environment for python projects using **django** framework and 
 
 At this point, the folder `src` will contain the files of the django project created.
 
-## 2. Config postgres 
+## 2. Postgres 
 Once your django project is created, you must config postgres as a database system:
 
 * Edit de project file **settings.py**
@@ -37,6 +37,8 @@ To prevent django from trying to connect to Postgres before it is fully up execu
 Finally, execute `docker-compose build` and `docker-compose stop && docker-compose up`. 
 
 **Note**: If you get ` django.db.utils.OperationalError: could not translate host name "db" to address: Name does not resolve` execute `docker system prune` and `docker-compose up`
+
+**Note**: Port 5432 is exposed
 
 
 
@@ -91,5 +93,8 @@ Now PyCharm will recognize the packages and modules of the project correctly
 
 ## Useful commands
 
-Run tests:
-   * docker-compose run app sh -c "python manage.py test" 
+Run tests: `docker-compose run app sh -c "python manage.py test"` 
+
+Create django project apps:  `docker-compose run app sh -c "python manage.py startapp APP_NAME"`
+    
+Create django superuser: `docker-compose run app sh -c "python manage.py createsuperuser"`   
